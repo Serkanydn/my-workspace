@@ -1,0 +1,54 @@
+.topbar {
+  box-shadow: 0 0.125rem 0.625rem rgba(90, 97, 105, 0.12);
+  background-color: var(--bg-light);
+  position: sticky;
+  top: 0;
+}
+
+.topbar .header {
+  border-bottom: 1px solid #e1e5eb;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  height: 50px;
+}
+
+.topbar .navigation {
+  color: black;
+  height: 50px;
+  margin-left: 1rem;
+  color: var(--bg-primary);
+  display: flex;
+  align-items: center;
+}
+.topbar .navigation a {
+  display: inline-block;
+  position: relative;
+}
+
+.topbar .navigation a::after {
+  content: "";
+  width: 0px;
+  height: 2px;
+  display: block;
+  background: var(--bg-primary);
+  transition: 300ms;
+}
+.topbar .navigation a:hover::after {
+  width: 100%;
+}
+
+.topbar .header .link:not(:last-child):after {
+  content: "/";
+  margin: 0 0.5rem;
+}
+
+.topbar .header .toggler {
+  font-size: 1.75rem;
+  cursor: pointer;
+}
+
+.topbar .header.header-sticky {
+  position: sticky;
+  top: 0;
+}

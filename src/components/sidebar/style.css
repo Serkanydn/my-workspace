@@ -1,0 +1,120 @@
+.sidebar.show {
+  min-width: 250px;
+  user-select: none;
+  background-color: white;
+  color: var(--color-light-dark);
+  box-shadow: 0 0.125rem 9.375rem rgba(90, 97, 105, 0.1), 0 0.25rem 0.5rem rgba(90, 97, 105, 0.12),
+    0 0.9375rem 1.375rem rgba(90, 97, 105, 0.1), 0 0.4375rem 2.1875rem rgba(165, 182, 201, 0.1);
+  overflow-y: auto;
+  position: sticky;
+  top: 0;
+  height: 100%;
+  left: -0;
+  transition: all 200ms;
+  opacity: 1;
+}
+
+.sidebar {
+  position: absolute;
+  left: -300px;
+  transition: all 300ms;
+  opacity: 0;
+  height: 100%;
+}
+
+.sidebar > ul {
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 1rem; */
+}
+
+.sidebar .sidebar-item,
+.sidebar .sidebar-group {
+  width: 100%;
+}
+
+.sidebar .sidebar-link {
+  padding: var(--padding-l);
+  padding-left: var(--padding-xxl);
+  padding-right: var(--padding-xxl);
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 300ms;
+  font-size: 0.875rem;
+}
+
+.sidebar .sidebar-link:hover {
+  color: var(--bg-primary);
+  background-color: var(--bg-light);
+  position: relative;
+}
+
+.sidebar .sidebar-link:hover::before {
+  content: "";
+  position: absolute;
+  background-color: #007bff;
+  width: 3px;
+  left: 0;
+  bottom: 0;
+  top: 0;
+}
+.sidebar .sidebar-link.active {
+  color: #007bff;
+  background-color: #fbfbfb;
+  position: relative;
+}
+
+.sidebar .sidebar-link.active::before {
+  content: "";
+  position: absolute;
+  background-color: #007bff;
+  width: 3px;
+  left: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.sidebar .sidebar-link span .icon {
+  margin-right: var(--margin-xs);
+  position: relative;
+  top: 2px;
+  font-size: var(--font-size-m);
+}
+
+.sidebar .item-title {
+  font-size: var(--font-size-l);
+  font-weight: 600;
+  padding: var(--padding-l);
+  background-color: white;
+}
+
+.sidebar .sub-items {
+  margin-left: var(--margin-xs);
+  height: auto;
+}
+
+.sidebar .sidebar-title {
+  border-bottom: 1px solid #e1e5eb;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  padding: var(--padding-l);
+  height: 50px;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+.sidebar::-webkit-scrollbar-track {
+  background: var(--bg-scrollbar);
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: var(--bg-scroll);
+}

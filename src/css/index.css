@@ -1,0 +1,53 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --bg-primary: #007bff;
+  --bg-scrollbar: lightblue;
+  --bg-scroll: #73b0f2;
+
+  --font-semibold: 600;
+
+  --bg-light: #fbfbfb;
+
+  --color-light-dark: #3d5170;
+
+  /* sizes */
+  --font-size-s: 0.75rem;
+  --font-size-m: 0.875rem;
+  --font-size-l: 1rem;
+  --font-size-xl: 1.1rem;
+  --font-size-xxl: 1.5rem;
+
+  /* Spacing */
+  --padding-s: 0.75rem;
+  --padding-m: 0.875rem;
+  --padding-l: 1rem;
+  --padding-xl: 1.25rem;
+  --padding-xxl: 1.5rem;
+
+  --margin-xs: 0.5rem;
+  --margin-s: 0.75rem;
+  --margin-m: 0.875rem;
+  --margin-l: 1rem;
+  --margin-xl: 1.25rem;
+  --margin-xxl: 1.5rem;
+}
+
+body,
+html,
+#root {
+  height: 100%;
+  background-color: white;
+}
