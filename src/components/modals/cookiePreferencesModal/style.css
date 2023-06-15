@@ -21,7 +21,6 @@
 
 .preferences-modal-container .header p {
   font-size: 14px;
-  /* letter-spacing: 2px; */
   line-height: 1.1rem;
   margin-bottom: 1rem;
   width: 463px;
@@ -35,6 +34,10 @@
   font-size: 14px;
   border: none;
   cursor: pointer;
+  transition: all 300ms;
+}
+.preferences-modal-container button:hover {
+  background-color: #2c2c73;
 }
 
 .preferences-modal-container .content h2 {
@@ -89,6 +92,7 @@
   background-color: #d2d9ef;
   display: inline-block;
   border-radius: 32px;
+  transition: 300ms all;
 }
 
 .preferences-modal-container input[type="checkbox"]::after {
@@ -103,6 +107,7 @@
   background-color: #131339;
   display: inline-block;
   border-radius: 32px;
+  transition: 300ms all;
 }
 
 .preferences-modal-container input[type="checkbox"]:checked::before {
