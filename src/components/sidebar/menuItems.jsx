@@ -1,5 +1,8 @@
 import { AiOutlineHome } from "react-icons/ai";
 import { GiConverseShoe } from "react-icons/gi";
+import { SiPagekit } from "react-icons/si";
+import { MdOutlinePrivacyTip } from "react-icons/md";
+import { BsCardText } from "react-icons/bs";
 
 const menuItems = [
   {
@@ -8,6 +11,7 @@ const menuItems = [
     icon: <AiOutlineHome className="icon" />,
     type: "button",
   },
+
   {
     title: "Components",
     type: "title",
@@ -15,13 +19,32 @@ const menuItems = [
   {
     title: "Modals",
     type: "groupButton",
+    icon: <BsCardText className="icon" />,
     items: [
       {
         path: "/components/modals/cookie-preferences-modal",
         title: "Cookie Preferences Modal",
-        icon: <GiConverseShoe className="icon" />,
+        icon: <MdOutlinePrivacyTip className="icon" />,
         type: "button",
         reference: "https://www.uidesigndaily.com/posts/figma-cookie-preferences-modal-cookies-settings-day-1581",
+      },
+    ],
+  },
+  {
+    title: "Simple Projects",
+    type: "title",
+  },
+  {
+    title: "Landing Pages",
+    type: "groupButton",
+    icon: <SiPagekit className="icon" />,
+    items: [
+      {
+        path: "/landingpages/1",
+        title: "Landing Page - 1",
+        icon: <SiPagekit className="icon" />,
+        type: "button",
+        reference: "https://www.uidesigndaily.com/posts/figma-landing-page-website-day-955",
       },
     ],
   },

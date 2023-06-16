@@ -38,7 +38,7 @@ function Sidebar() {
           ) : item.type == "title" ? (
             <Title key={index} text={item.title} />
           ) : (
-            <SidebarGroup key={index} items={item.items} title={item.title} />
+            <SidebarGroup icon={item.icon} key={index} items={item.items} title={item.title} />
           )
         )}
       </ul>

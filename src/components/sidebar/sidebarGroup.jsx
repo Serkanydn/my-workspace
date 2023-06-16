@@ -9,7 +9,7 @@ import SidebarSingle from "./sidebarSingle";
 import { useDispatch } from "react-redux";
 import { setReference } from "../../store/slices/header";
 
-function SidebarGroup({ title, items }) {
+function SidebarGroup({ title, icon, items }) {
   const groupRef = useRef(null);
   const [isShow, setIsShow] = useState(false);
   function handleOpenSubItems() {
@@ -29,7 +29,7 @@ function SidebarGroup({ title, items }) {
       <li ref={groupRef} className="sidebar-group ">
         <div className="sidebar-link" onClick={handleOpenSubItems}>
           <span>
-            <AiOutlineHome className="icon" />
+            {icon}
             {title}
           </span>
           {isShow ? <IoIosArrowUp /> : <IoIosArrowDown />}
