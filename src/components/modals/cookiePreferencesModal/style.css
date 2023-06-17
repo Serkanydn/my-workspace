@@ -119,3 +119,32 @@
 
   background-color: #d2d9ef;
 }
+
+@media (max-width: 768px) {
+  .preferences-modal-container {
+    width: 100%;
+    padding: 20px;
+  }
+  .preferences-modal-container .header p {
+    width: 100%;
+  }
+
+  .preferences-modal-container .content .preferences .preference {
+    padding: 3px;
+    margin-bottom: 20px;
+  }
+
+  .preferences-modal-container .content .preferences .preference {
+    padding: 3px;
+    margin-bottom: 20px;
+  }
+  .preferences-modal-container .content .preferences .preference:last-child {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 425px) {
+  .preferences-modal-container footer {
+    flex-direction: column;
+  }
+}

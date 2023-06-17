@@ -1,5 +1,6 @@
 .landing-page-1 {
   width: 100%;
+  max-width: 1400px;
   /* height: 100%; */
   position: relative;
   background-color: #eef1fc;
@@ -20,7 +21,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 30px 50px;
-  margin-bottom: 100px;
+  margin-bottom: 120px;
 }
 
 .landing-page-1 nav .logo {
@@ -69,6 +70,8 @@
   margin: auto;
   text-align: center;
   width: 750px;
+  padding: 0 50px;
+  margin-bottom: 75px;
 }
 
 .landing-page-1 .content h1 {
@@ -86,13 +89,13 @@
   grid-template-columns: repeat(3, minMax(250px, 1fr));
   padding: 0 70px;
   gap: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 75px;
 }
 
 .landing-page-1 .cards .card {
   height: 250px;
   background-color: white;
-  border-radius: 10%;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -170,4 +173,45 @@
   color: #13274f;
   font-size: 14px;
   opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .landing-page-1 nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .landing-page-1 .cards {
+    grid-template-columns: 1fr;
+    padding: 0 30px;
+  }
+
+  .landing-page-1 .content h1 {
+    font-size: 24px;
+    font-weight: var(--font-bold);
+  }
+
+  .landing-page-1 .content {
+    width: 100%;
+  }
+  .landing-page-1 .content p {
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+
+  .landing-page-1 footer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px 70px 50px;
+    height: auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .landing-page-1 .cards .card button {
+    font-size: 16px;
+  }
 }
