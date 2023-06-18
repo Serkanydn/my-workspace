@@ -9,8 +9,6 @@ import { useDispatch, useSelector } from "react-redux";
 function Topbar() {
   const location = useLocation().pathname;
   const { reference } = useSelector((state) => state.header);
-  console.log("reference", reference);
-  console.log("location", location);
   const dispatch = useDispatch();
 
   const handleToggleSidebar = () => {

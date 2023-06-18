@@ -5,6 +5,7 @@
   overflow: hidden;
   --button-bg-color: #0a0e1c;
   position: relative;
+  container-type: inline-size;
 }
 
 .landing-page-2 nav {
@@ -23,6 +24,7 @@
 }
 .landing-page-2 nav ul li {
   font-size: var(--font-size-l);
+  cursor: pointer;
 }
 
 .landing-page-2 nav ul li span {
@@ -208,7 +210,7 @@
   background-color: #f3f0f7;
 }
 
-@media (max-width: 768px) {
+@container (max-width: 600px) {
   .landing-page-2 .container .content {
     padding: 0 4rem;
     width: 100%;

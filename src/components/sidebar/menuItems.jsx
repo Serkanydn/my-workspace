@@ -1,8 +1,9 @@
 import { AiOutlineHome } from "react-icons/ai";
-import { GiConverseShoe } from "react-icons/gi";
 import { SiPagekit } from "react-icons/si";
 import { MdOutlinePrivacyTip } from "react-icons/md";
 import { BsCardText } from "react-icons/bs";
+import { IoIosNotifications } from "react-icons/io";
+import { RxSection } from "react-icons/rx";
 
 const menuItems = [
   {
@@ -31,6 +32,21 @@ const menuItems = [
     ],
   },
   {
+    title: "Notifications",
+    type: "groupButton",
+    icon: <IoIosNotifications className="icon" />,
+    items: [
+      {
+        path: "/components/notifications/1",
+        title: "1",
+        icon: <IoIosNotifications className="icon" />,
+        type: "button",
+        reference: "https://www.uidesigndaily.com/posts/figma-notification-day-1559",
+      },
+    ],
+  },
+
+  {
     title: "Simple Projects",
     type: "title",
   },
@@ -41,17 +57,31 @@ const menuItems = [
     items: [
       {
         path: "/landingpages/1",
-        title: "Landing Page - 1",
+        title: "1",
         icon: <SiPagekit className="icon" />,
         type: "button",
         reference: "https://www.uidesigndaily.com/posts/figma-landing-page-website-day-955",
       },
       {
         path: "/landingpages/2",
-        title: "Landing Page - 2",
+        title: "2",
         icon: <SiPagekit className="icon" />,
         type: "button",
         reference: "https://www.uidesigndaily.com/posts/sketch-domain-site-landing-page-website-day-1161",
+      },
+    ],
+  },
+  {
+    title: "Sections",
+    type: "groupButton",
+    icon: <RxSection className="icon" />,
+    items: [
+      {
+        path: "/components/sections/buy-subscription",
+        title: "Buy Subscription",
+        icon: <RxSection className="icon" />,
+        type: "button",
+        reference: "https://www.uidesigndaily.com/posts/figma-buy-subscription-section-pricing-card-day-1574",
       },
     ],
   },

@@ -9,7 +9,6 @@ const header = createSlice({
   initialState,
   reducers: {
     setReference: (state, { payload }) => {
-      console.log("payload", payload);
       state.reference = payload;
     },
   },
