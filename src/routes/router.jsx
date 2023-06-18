@@ -3,6 +3,7 @@ import MainLayout from "../layouts/mainLayout";
 import ShoesCard from "../components/shoesCard";
 import CookiePreferencesModal from "../components/modals/cookiePreferencesModal";
 import LandingPage1 from "../landingPages/landingPage1";
+import LandingPage2 from "../landingPages/landingPage2";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "/landingpages/1",
         element: <LandingPage1 />,
+      },
+      {
+        path: "/landingpages/2",
+        element: <LandingPage2 />,
       },
     ],
   },

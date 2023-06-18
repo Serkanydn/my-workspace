@@ -51,7 +51,7 @@ function LandingPage1() {
           <p>Requires Java 6 or higher</p>
         </div>
       </section>
-
+      {/* 
       <footer>
         <div>
           <h2>About</h2>
@@ -72,7 +72,7 @@ function LandingPage1() {
         </div>
 
         <div className="copyright">© 2006–2018 by Bernie Jenny, Monash University, Melbourne, Australia. Last site update: 5 May 2018.</div>
-      </footer>
+      </footer> */}
     </div>
   );
 }

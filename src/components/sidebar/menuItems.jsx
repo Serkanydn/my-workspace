@@ -46,6 +46,13 @@ const menuItems = [
         type: "button",
         reference: "https://www.uidesigndaily.com/posts/figma-landing-page-website-day-955",
       },
+      {
+        path: "/landingpages/2",
+        title: "Landing Page - 2",
+        icon: <SiPagekit className="icon" />,
+        type: "button",
+        reference: "https://www.uidesigndaily.com/posts/sketch-domain-site-landing-page-website-day-1161",
+      },
     ],
   },
 ];
