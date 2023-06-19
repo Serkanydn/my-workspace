@@ -7,12 +7,12 @@ function MainLayout() {
     <div className={styles.container}>
       <Sidebar />
 
-      <main className={styles.main}>
+      <div className={styles.main}>
         <Topbar />
         <div className={styles.content}>
           <Outlet />
         </div>
-      </main>
+      </div>
     </div>
   );
 }

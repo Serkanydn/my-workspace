@@ -2,9 +2,10 @@ import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layouts/mainLayout";
 import ShoesCard from "../components/shoesCard";
 import CookiePreferencesModal from "../components/modals/cookiePreferencesModal";
-import LandingPage1 from "../landingPages/1";
-import LandingPage2 from "../landingPages/2";
+import LandingPage1 from "../simpleProjects/landingPages/1";
+import LandingPage2 from "../simpleProjects/landingPages/2";
 import Notification1 from "../components/notifications/1";
+import BuySubscription from "../simpleProjects/sections/buySubscription";
 
 const router = createBrowserRouter([
   {
@@ -14,22 +15,37 @@ const router = createBrowserRouter([
         path: "/",
         element: <>Home</>,
       },
+      // ! Components
+
+      // * Modals
       {
         path: "/components/modals/cookie-preferences-modal",
         element: <CookiePreferencesModal />,
       },
-      {
-        path: "/landingpages/1",
-        element: <LandingPage1 />,
-      },
-      {
-        path: "/landingpages/2",
-        element: <LandingPage2 />,
-      },
 
+      // * Notifications
       {
         path: "/components/notifications/1",
         element: <Notification1 />,
+      },
+
+      // ! Simple Projects
+
+      // * Landing Pages
+      {
+        path: "/simpleProjects/landingpages/1",
+        element: <LandingPage1 />,
+      },
+      {
+        path: "/simpleProjects/landingpages/2",
+        element: <LandingPage2 />,
+      },
+
+      // * Sections
+
+      {
+        path: "/simpleProjects/sections/buy-subscription",
+        element: <BuySubscription />,
       },
     ],
   },

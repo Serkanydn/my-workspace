@@ -2,8 +2,8 @@
   display: flex;
   height: 100%;
   color: black;
-  overflow-y: auto;
   align-items: flex-start;
+  overflow-y: auto;
 }
 
 .main {
@@ -15,5 +15,6 @@
 
 .content {
   flex: 1;
+  height: 100%;
   padding: 1rem;
 }

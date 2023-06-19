@@ -56,14 +56,14 @@ const menuItems = [
     icon: <SiPagekit className="icon" />,
     items: [
       {
-        path: "/landingpages/1",
+        path: "/simpleProjects/landingpages/1",
         title: "1",
         icon: <SiPagekit className="icon" />,
         type: "button",
         reference: "https://www.uidesigndaily.com/posts/figma-landing-page-website-day-955",
       },
       {
-        path: "/landingpages/2",
+        path: "/simpleProjects/landingpages/2",
         title: "2",
         icon: <SiPagekit className="icon" />,
         type: "button",
@@ -77,7 +77,7 @@ const menuItems = [
     icon: <RxSection className="icon" />,
     items: [
       {
-        path: "/components/sections/buy-subscription",
+        path: "/simpleProjects/sections/buy-subscription",
         title: "Buy Subscription",
         icon: <RxSection className="icon" />,
         type: "button",
