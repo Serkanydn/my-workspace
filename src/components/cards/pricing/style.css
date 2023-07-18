@@ -77,7 +77,7 @@
   font-size: 24px;
 }
 
-.pricing-card input[type="checkbox"] {
+.pricing-card input[type="radio"] {
   appearance: none;
   min-width: 42px;
   min-height: 42px;
@@ -87,12 +87,12 @@
   cursor: pointer;
 }
 
-.pricing-card .container .cards .card:has(input[type="checkbox"]:checked) {
+.pricing-card .container .cards .card:has(input[type="radio"]:checked) {
   --border-size: 1px;
   --border-color: #2f42ee;
 }
 
-.pricing-card input[type="checkbox"]::before {
+.pricing-card input[type="radio"]::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -102,7 +102,7 @@
   transition: background-color 300ms;
 }
 
-.pricing-card input[type="checkbox"]:checked:before {
+.pricing-card input[type="radio"]:checked:before {
   content: "";
   background-color: #0c1033;
   background-image: url("images/checked.svg");

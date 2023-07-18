@@ -13,7 +13,7 @@ function Pricing() {
 
         <div className="cards">
           <div className="card">
-            <input type="checkbox" name="" id="" />
+            <input type="radio" checked name="radio-group" id="" value="ss" />
             <div className="content">
               <h4>Monthly</h4>
               <p>4 weeks for free</p>
@@ -22,7 +22,7 @@ function Pricing() {
           </div>
 
           <div className="card">
-            <input type="checkbox" name="" id="" />
+            <input type="radio" name="radio-group" id="" />
             <div className="content">
               <span>Best Value</span>
               <h4>Yearly</h4>

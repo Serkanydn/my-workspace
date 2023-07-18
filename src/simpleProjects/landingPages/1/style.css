@@ -1,7 +1,7 @@
 .landing-page-1 {
   width: 100%;
-  max-width: 1400px;
-  /* height: 100%; */
+  max-width: 1200px;
+  margin: auto;
   position: relative;
   background-color: #eef1fc;
   overflow: hidden;
