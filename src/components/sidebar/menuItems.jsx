@@ -98,6 +98,13 @@ const menuItems = [
         type: "button",
         reference: "https://www.uidesigndaily.com/posts/figma-buy-subscription-section-pricing-card-day-1574",
       },
+      {
+        path: "/simpleProjects/sections/user-list-section",
+        title: "User List",
+        icon: <IoArrowRedoSharp className="icon" />,
+        type: "button",
+        reference: "https://www.uidesigndaily.com/posts/figma-users-list-card-day-1542",
+      },
     ],
   },
 ];

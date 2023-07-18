@@ -7,6 +7,7 @@ import LandingPage2 from "../simpleProjects/landingPages/2";
 import Notification1 from "../components/notifications/1";
 import PricingCard from "../components/cards/pricing";
 import BuySubscription from "../simpleProjects/sections/buySubscription";
+import UserListSection from "../simpleProjects/sections/userList";
 
 const router = createBrowserRouter([
   {
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
       {
         path: "/simpleProjects/sections/buy-subscription",
         element: <BuySubscription />,
+      },
+      {
+        path: "/simpleProjects/sections/user-list-section",
+        element: <UserListSection />,
       },
     ],
   },

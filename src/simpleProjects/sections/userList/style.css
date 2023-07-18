@@ -1,0 +1,184 @@
+.user-list-section {
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  container-type: inline-size;
+}
+
+.user-list-section .container {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  max-width: 1250px;
+  min-width: 100%;
+  padding: 4rem;
+  height: 100%;
+}
+
+.user-list-section .container .title {
+  font-size: 2rem;
+  font-weight: var(--font-black);
+  margin-bottom: 1.5rem;
+}
+
+.user-list-section .container header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 70px;
+  align-items: center;
+}
+
+.user-list-section .container header .search {
+  --border-color: #bfc8e5;
+  border-radius: 0.25rem;
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 300ms;
+  padding: 0 1rem;
+}
+
+.user-list-section .container header .search:has(input:focus) {
+  --border-color: #849fff;
+}
+
+.user-list-section .container header .search input {
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  height: 100%;
+  padding: 1rem 0;
+}
+
+.user-list-section .container header .search .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.user-list-section .container header nav ul,
+.user-list-section .container header nav.mobile ul li {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.user-list-section .container header nav ul li {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.user-list-section .container header nav ul li.active,
+.user-list-section .container header nav ul li:hover {
+  color: white;
+  background-color: #849fff;
+}
+
+.user-list-section .container header nav.mobile {
+  position: relative;
+  padding: 1rem;
+  height: 100%;
+  border: 1px solid #bfc8e5;
+  border-radius: 0.5rem;
+  display: none;
+}
+.user-list-section .container header nav.mobile .mobile-button {
+  font-size: 24px;
+}
+
+.user-list-section .container header nav.mobile ul {
+  flex-direction: column;
+  background-color: white;
+  position: absolute;
+  right: 0;
+  top: 110%;
+  border-radius: 0.5rem;
+  border: 1px solid #bfc8e5;
+  padding: 0.5rem;
+}
+
+.user-list-section .container main {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, auto));
+  gap: 1rem;
+}
+
+.user-list-section .container main .card {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  gap: 1rem;
+  border: 1px solid white;
+  transition: all 300ms;
+}
+
+.user-list-section .container main .card:hover {
+  border-color: #bfc8e5;
+  border-radius: 1rem;
+  transform: scale(1.1);
+}
+
+.user-list-section .container main .card label {
+  display: block;
+}
+
+.user-list-section .container main .card .description .name {
+  font-size: 1.25rem;
+  font-weight: var(--font-black);
+  margin-bottom: 0.5rem;
+}
+
+.user-list-section .container main .card .description .city {
+  font-size: 14px;
+  font-weight: var(--font-medium);
+  color: #151b32;
+}
+
+.user-list-section .container main .card .hobbies {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.user-list-section .container main .card .hobbies span {
+  border-radius: 0.75rem;
+  border: 1px solid #bfc8e6;
+  padding: 2px 0.5rem;
+  color: #516fd4;
+  font-size: 0.75rem;
+  font-weight: var(--font-medium);
+}
+
+.user-list-section .container .alert {
+  padding: 1rem;
+  background-color: #f8d7da;
+  width: 100%;
+  border: 1px solid #f5c2c7;
+  color: #842029;
+  border-radius: 0.5rem;
+  grid-column-end: span 3;
+}
+
+@container (max-width:1200px) {
+  .user-list-section .container main {
+    grid-template-columns: repeat(2, minmax(300px, auto));
+  }
+}
+@container (max-width:992px) {
+  .user-list-section .container header nav:not(.mobile) {
+    display: none;
+  }
+
+  .user-list-section .container header nav.mobile {
+    display: grid;
+    align-items: center;
+  }
+}
+@container (max-width:768px) {
+  .user-list-section .container main {
+    grid-template-columns: repeat(1, minmax(300px, auto));
+  }
+}
