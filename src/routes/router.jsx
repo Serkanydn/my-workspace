@@ -4,6 +4,7 @@ import ShoesCard from "../components/shoesCard";
 import CookiePreferencesModal from "../components/modals/cookiePreferences";
 import LandingPage1 from "../simpleProjects/landingPages/1";
 import LandingPage2 from "../simpleProjects/landingPages/2";
+import GroceriesList from "../simpleProjects/groceriesList";
 import Notification1 from "../components/notifications/1";
 import PricingCard from "../components/cards/pricing";
 import BuySubscription from "../simpleProjects/sections/buySubscription";
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: "/simpleProjects/landingpages/2",
         element: <LandingPage2 />,
+      },
+      {
+        path: "/simpleProjects/groceries-list",
+        element: <GroceriesList />,
       },
 
       // * Sections

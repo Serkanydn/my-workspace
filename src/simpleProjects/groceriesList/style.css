@@ -1,0 +1,141 @@
+.grocier-list {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  
+
+  & .container {
+    background-color: white;
+    width: 450px;
+    height: 820px;
+    border-radius: 3rem;
+    padding: 3rem;
+    position: relative;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  & header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.25rem;
+
+    & .title {
+      font-family: "Merriweather", serif;
+      font-size: var(--font-size-xxxl);
+      font-weight: var(--font-black);
+      color: #3b3b71;
+    }
+
+  }
+
+  & p {
+    color: #8a8aaa;
+    margin-bottom: 1.5rem;
+  }
+
+  & .item {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    & span {
+      font-size: 1.25rem;
+
+      font-weight: var(--font-semibold);
+    }
+  }
+
+  & .incomplate-items ,& .complated-items{
+    display: grid;
+    gap: 1rem;
+    color: #3b3b71;
+  }
+
+  & .complated-items {
+    color: #8a8aaa;
+    margin-top: 2rem;
+
+    & .complated-items-title{
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        color: #3B3B71;
+        font-weight: 600;
+    }
+  }
+
+  & input[type="checkbox"] {
+    width: 35px;
+    height: 35px;
+    margin-right: 0.5rem;
+    appearance: none;
+    cursor: pointer;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      border-radius: 50%;
+
+      border: 2px solid #3b3b71;
+    }
+
+    &:checked::before {
+      content: "";
+      border: 2px solid #8a8aaa;
+      background-image: url("images/checked.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      fill: #8a8aaa;
+    }
+  }
+
+
+  & .add-item-container{
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    /* margin:0 3rem 3rem 0; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding:0 50px;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  & .groceries-form{
+    display: flex;
+    width: 100%;
+    gap: .5rem;
+  }
+
+
+  & .add-item-button{
+   
+    font-size: 2rem;
+    background-color: #3B3B71;
+    color: white;
+    display: flex;
+    padding: .1rem 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+
+    transition: all 300ms;
+
+    &:hover {
+        background-color: #1d1d42;
+    }
+
+    & div{
+      display: grid;
+      place-items: center;
+    }
+  }
+
+}

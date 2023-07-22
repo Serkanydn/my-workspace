@@ -84,6 +84,7 @@ const menuItems = [
         type: "button",
         reference: "https://www.uidesigndaily.com/posts/sketch-domain-site-landing-page-website-day-1161",
       },
+ 
     ],
   },
   {
@@ -106,6 +107,13 @@ const menuItems = [
         reference: "https://www.uidesigndaily.com/posts/figma-users-list-card-day-1542",
       },
     ],
+  },
+  {
+    path: "/simpleProjects/groceries-list",
+    title: "Groceries List",
+    icon: <IoArrowRedoSharp className="icon" />,
+    type: "button",
+    reference: "https://www.uidesigndaily.com/posts/figma-to-do-list-day-1543",
   },
 ];
 
