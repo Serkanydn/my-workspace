@@ -6,6 +6,7 @@
   background-color: #eef1fc;
   overflow: hidden;
   border: solid 1px rgb(220, 220, 220);
+  container-type: inline-size;
 }
 
 .landing-page-1 .wave {
@@ -175,18 +176,18 @@
   opacity: 0.6;
 }
 
-@media (max-width: 768px) {
+@container (max-width: 768px) {
   .landing-page-1 nav ul {
     flex-direction: column;
     gap: 0;
   }
-}
-
-@media (max-width: 992px) {
+  
   .landing-page-1 .cards {
     grid-template-columns: 1fr;
   }
+}
 
+@container (max-width: 992px) {
   .landing-page-1 .content p {
     font-size: 16px;
     margin-bottom: 50px;
@@ -201,9 +202,9 @@
   }
 }
 
-@media (max-width: 1200px) {
+@container (max-width: 1200px) {
   .landing-page-1 .cards {
-    padding: 0 20px;
+    padding: 0 40px;
   }
   .landing-page-1 .cards .card button {
     font-size: 14px;
