@@ -36,36 +36,52 @@
     margin-bottom: 1.5rem;
   }
 
-  & .item {
-    display: flex;
-    align-items: center;
-    position: relative;
+  & .content{
+    height: 550px;
+    overflow-y: auto;
 
-    & span {
-      font-size: 1.25rem;
-
-      font-weight: var(--font-semibold);
+    &::-webkit-scrollbar {
+      width: 4px;               
     }
-  }
-
-  & .incomplate-items ,& .complated-items{
-    display: grid;
-    gap: 1rem;
-    color: #3b3b71;
-  }
-
-  & .complated-items {
-    color: #8a8aaa;
-    margin-top: 2rem;
-
-    & .complated-items-title{
-        font-size: 1.1rem;
-        letter-spacing: 1px;
-        color: #3B3B71;
-        font-weight: 600;
+     
+    &::-webkit-scrollbar-track {
+      background: #8a8aaa;       
     }
-  }
 
+    &::-webkit-scrollbar-thumb {
+      background-color: #3b3b71;    
+    }
+    
+    & .item {
+      display: flex;
+      align-items: center;
+      position: relative;
+  
+      & span {
+        font-size: 1.25rem;
+        font-weight: var(--font-semibold);
+      }
+    }
+  
+    & .incomplate-items ,& .complated-items{
+      display: grid;
+      gap: 1rem;
+      color: #3b3b71;
+    }
+  
+    & .complated-items {
+      color: #8a8aaa;
+      margin-top: 2rem;
+  
+      & .complated-items-title{
+          font-size: 1.1rem;
+          letter-spacing: 1px;
+          color: #3B3B71;
+          font-weight: 600;
+      }
+    }
+  
+  }
   & input[type="checkbox"] {
     width: 35px;
     height: 35px;
@@ -100,7 +116,6 @@
     position: absolute;
     right: 0;
     bottom: 50px;
-    /* margin:0 3rem 3rem 0; */
     display: flex;
     align-items: center;
     justify-content: flex-end;

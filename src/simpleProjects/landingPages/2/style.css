@@ -68,7 +68,7 @@
   padding: 50px;
   display: flex;
   justify-content: space-between;
-  z-index: 111;
+  z-index: 1;
 }
 .landing-page-2 .sign-in-dropdown-wrapper .sign-in-dropdown .diveder {
   display: none;

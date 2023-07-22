@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import "./style.css"
-import { createModal, destroyAllModals, destroyModal, useModals } from "../../utils/modalHelper"
 import { motion, AnimatePresence } from 'framer-motion'
 import { AiOutlinePlus } from "react-icons/ai"
 import { RxDotsHorizontal } from "react-icons/rx"
 import { BsCheck2 } from "react-icons/bs"
 import { v4 as uuidv4 } from 'uuid';
 import { useRef } from 'react'
+import { toast } from 'react-toastify';
+
 
 
 function GroceriesList() {
@@ -27,8 +28,30 @@ function GroceriesList() {
   }
 
   const handleAddItem = () => {
-    setItems([...items, { id: uuidv4(), name: inputRef.current.value, isComplate: false }])
-    inputRef.current.value = ""
+    const { value, classList } = inputRef.current
+    if (!value) {
+      classList.add("input-error")
+      return
+    }
+
+    const isExist = items.some((item) => item.name === value)
+    if (isExist) {
+      toast.error("Grocerie already exist", {
+        position: "top-right",
+        autoClose: 500,
+        hideProgressBar: true,
+        closeOnClick: false,
+        pauseOnHover: false,
+        draggable: false,
+        progress: undefined,
+        theme: "colored",
+      })
+      return
+    }
+
+    setItems([...items, { id: uuidv4(), name: value, isComplate: false }])
+    value = ""
+    classList.remove("input-error")
   }
 
   return (
@@ -40,47 +63,52 @@ function GroceriesList() {
           <RxDotsHorizontal size="2rem" />
         </header>
         <p>Shared with 1 person</p>
-        <AnimatePresence>
-          {
-            items.filter(i => !i.isComplate).length > 0 && (
-              <div className="incomplate-items">
-                {items.filter(i => !i.isComplate).map((item) => {
-                  return (
-                    <motion.div
-                      initial={{ left: "-100px", opacity: 0 }}
-                      animate={{ left: 0, opacity: 1 }}
-                      exit={{ left: "-100px", opacity: 0 }}
 
 
-                      key={item.id} className="item">
-                      <input onChange={() => handleToogleClick(item)} type='checkbox' />
-                      <span>{item.name}</span>
-                    </motion.div>
-                  )
-                })}
-              </div>
-            )
-          }
-        </AnimatePresence>
+        <div className='content'>
 
 
-        <div className="complated-items">
-          <div className="complated-items-title">COMPLATED ({items.filter(i => i.isComplate).length})</div>
           <AnimatePresence>
-            {items.filter(i => i.isComplate).map((item) => {
-              return (<motion.div
-                initial={{ left: "-100px", opacity: 0 }}
-                animate={{ left: 0, opacity: 1 }}
-                exit={{ left: "-100px", opacity: 0 }}
+            {
+              items.filter(i => !i.isComplate).length > 0 && (
+                <div className="incomplate-items">
+                  {items.filter(i => !i.isComplate).map((item) => {
+                    return (
+                      <motion.div
+                        initial={{ left: "-100px", opacity: 0 }}
+                        animate={{ left: 0, opacity: 1 }}
+                        exit={{ left: "-100px", opacity: 0 }}
 
-                key={item.id} className="item">
-                <input type='checkbox' onChange={() => handleToogleClick(item)} checked={item.isComplate} />
-                <span>{item.name}</span>
-              </motion.div>)
-            })}
+
+                        key={item.id} className="item">
+                        <input onChange={() => handleToogleClick(item)} type='checkbox' />
+                        <span>{item.name}</span>
+                      </motion.div>
+                    )
+                  })}
+                </div>
+              )
+            }
           </AnimatePresence>
-        </div>
 
+
+          <div className="complated-items">
+            <div className="complated-items-title">COMPLATED ({items.filter(i => i.isComplate).length})</div>
+            <AnimatePresence>
+              {items.filter(i => i.isComplate).map((item) => {
+                return (<motion.div
+                  initial={{ left: "-100px", opacity: 0 }}
+                  animate={{ left: 0, opacity: 1 }}
+                  exit={{ left: "-100px", opacity: 0 }}
+
+                  key={item.id} className="item">
+                  <input type='checkbox' onChange={() => handleToogleClick(item)} checked={item.isComplate} />
+                  <span>{item.name}</span>
+                </motion.div>)
+              })}
+            </AnimatePresence>
+          </div>
+        </div>
 
         <div className='add-item-container'>
           <AnimatePresence>
@@ -90,7 +118,12 @@ function GroceriesList() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               className='groceries-form'>
-              <input ref={inputRef} type='text' placeholder='Groceries name' className='form-input w-full' />
+              <input ref={inputRef} type='text' onChange={(event) => {
+                if ([...event.target.classList].includes("input-error"))
+                  event.target.classList.remove("input-error")
+
+
+              }} placeholder='Groceries name' className='form-input  w-full' />
               <button className='btn btn-primary' onClick={handleAddItem}>Ekle</button>
             </motion.div>}
           </AnimatePresence>

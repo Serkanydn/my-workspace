@@ -40,6 +40,7 @@
   --margin-l: 1rem;
   --margin-xl: 1.25rem;
   --margin-xxl: 1.5rem;
+
 }
 
 body,
@@ -99,6 +100,27 @@ html,
     -webkit-box-shadow: 0px 0px 3px 0px lightblue;
     -moz-box-shadow: 0px 0px 3px 0px lightblue;
     box-shadow: 0px 0px 3px 0px lightblue;
+  }
+}
+
+.input-error{
+  /* 842029 , f5c2c7 */
+  border-color: #f5c2c7;
+  -webkit-box-shadow: 0px 0px 3px 0px #842029;
+  -moz-box-shadow: 0px 0px 3px 0px #842029;
+  box-shadow: 0px 0px 3px 0px #842029;
+
+  color:#842029;
+
+  &::-webkit-input-placeholder{
+    color:  #842029;
+  }
+
+  &:hover, &:focus{
+    border-color: #f5c2c7;
+  -webkit-box-shadow: 0px 0px 3px 0px #842029;
+  -moz-box-shadow: 0px 0px 3px 0px #842029;
+  box-shadow: 0px 0px 3px 0px #842029;
   }
 }
 
