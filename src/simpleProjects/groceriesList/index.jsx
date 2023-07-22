@@ -50,8 +50,8 @@ function GroceriesList() {
     }
 
     setItems([...items, { id: uuidv4(), name: value, isComplate: false }])
-    value = ""
-    classList.remove("input-error")
+    inputRef.current.value = ""
+    inputRef.current.classList.remove("input-error")
   }
 
   return (
