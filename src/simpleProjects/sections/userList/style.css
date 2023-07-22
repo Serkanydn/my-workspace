@@ -97,6 +97,7 @@
   border-radius: 0.5rem;
   border: 1px solid #bfc8e5;
   padding: 0.5rem;
+  z-index: 1;
 }
 
 .user-list-section .container main {
