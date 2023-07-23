@@ -9,6 +9,8 @@ import Notification1 from "../components/notifications/1";
 import PricingCard from "../components/cards/pricing";
 import BuySubscription from "../simpleProjects/sections/buySubscription";
 import UserListSection from "../simpleProjects/sections/userList";
+import SignUp1 from "../simpleProjects/sections/signUp1";
+import Table1 from "../simpleProjects/tables/1";
 
 const router = createBrowserRouter([
   {
@@ -64,6 +66,17 @@ const router = createBrowserRouter([
         path: "/simpleProjects/sections/user-list-section",
         element: <UserListSection />,
       },
+      {
+        path: "/simpleProjects/sections/sign-up-1",
+        element: <SignUp1 />,
+      },
+
+      // * Tables 
+
+      {
+        path:"/simpleProjects/tables/1",
+        element:<Table1/>
+      }
     ],
   },
 ]);

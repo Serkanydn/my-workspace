@@ -106,6 +106,13 @@ const menuItems = [
         type: "button",
         reference: "https://www.uidesigndaily.com/posts/figma-users-list-card-day-1542",
       },
+      {
+        path: "/simpleProjects/sections/sign-up-1",
+        title: "Sign Up 1",
+        icon: <IoArrowRedoSharp className="icon" />,
+        type: "button",
+        reference: "https://www.uidesigndaily.com/posts/sketch-log-in-sign-up-authentication-day-1431",
+      },
     ],
   },
   {
@@ -114,6 +121,20 @@ const menuItems = [
     icon: <IoArrowRedoSharp className="icon" />,
     type: "button",
     reference: "https://www.uidesigndaily.com/posts/figma-to-do-list-day-1543",
+  },
+  {
+    title: "Tables",
+    type: "groupButton",
+    icon: <RxSection className="icon" />,
+    items: [
+      {
+        path: "/simpleProjects/tables/1",
+        title: "1",
+        icon: <IoArrowRedoSharp className="icon" />,
+        type: "button",
+        reference: "https://www.uidesigndaily.com/posts/figma-table-day-1442",
+      },
+    ],
   },
 ];
 
