@@ -9,7 +9,7 @@ import Notification1 from "../components/notifications/1";
 import PricingCard from "../components/cards/pricing";
 import BuySubscription from "../simpleProjects/sections/buySubscription";
 import UserListSection from "../simpleProjects/sections/userList";
-import SignUp1 from "../simpleProjects/sections/signUp1";
+import LogIn1 from "../simpleProjects/sections/logIn1";
 import Table1 from "../simpleProjects/tables/1";
 
 const router = createBrowserRouter([
@@ -67,16 +67,16 @@ const router = createBrowserRouter([
         element: <UserListSection />,
       },
       {
-        path: "/simpleProjects/sections/sign-up-1",
-        element: <SignUp1 />,
+        path: "/simpleProjects/sections/log-in-1",
+        element: <LogIn1 />,
       },
 
-      // * Tables 
+      // * Tables
 
       {
-        path:"/simpleProjects/tables/1",
-        element:<Table1/>
-      }
+        path: "/simpleProjects/tables/1",
+        element: <Table1 />,
+      },
     ],
   },
 ]);

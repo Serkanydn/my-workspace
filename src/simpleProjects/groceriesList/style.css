@@ -2,7 +2,32 @@
   height: 100%;
   display: grid;
   place-items: center;
-  
+
+  .btn {
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 300ms;
+    border-radius: 0.2rem;
+  }
+
+  .btn-default {
+    background-color: lightgray;
+
+    &:hover {
+      background-color: rgb(197, 196, 196);
+    }
+  }
+
+  .btn-primary {
+    color: white;
+    background-color: #0d6efd;
+
+    &:hover {
+      background-color: #0b5ed7;
+    }
+  }
 
   & .container {
     background-color: white;
@@ -28,7 +53,6 @@
       font-weight: var(--font-black);
       color: #3b3b71;
     }
-
   }
 
   & p {
@@ -36,51 +60,51 @@
     margin-bottom: 1.5rem;
   }
 
-  & .content{
+  & .content {
     height: 550px;
     overflow-y: auto;
 
     &::-webkit-scrollbar {
-      width: 4px;               
+      width: 4px;
     }
-     
+
     &::-webkit-scrollbar-track {
-      background: #8a8aaa;       
+      background: #8a8aaa;
     }
 
     &::-webkit-scrollbar-thumb {
-      background-color: #3b3b71;    
+      background-color: #3b3b71;
     }
-    
+
     & .item {
       display: flex;
       align-items: center;
       position: relative;
-  
+
       & span {
         font-size: 1.25rem;
         font-weight: var(--font-semibold);
       }
     }
-  
-    & .incomplate-items ,& .complated-items{
+
+    & .incomplate-items,
+    & .complated-items {
       display: grid;
       gap: 1rem;
       color: #3b3b71;
     }
-  
+
     & .complated-items {
       color: #8a8aaa;
       margin-top: 2rem;
-  
-      & .complated-items-title{
-          font-size: 1.1rem;
-          letter-spacing: 1px;
-          color: #3B3B71;
-          font-weight: 600;
+
+      & .complated-items-title {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        color: #3b3b71;
+        font-weight: 600;
       }
     }
-  
   }
   & input[type="checkbox"] {
     width: 35px;
@@ -111,46 +135,42 @@
     }
   }
 
-
-  & .add-item-container{
+  & .add-item-container {
     position: absolute;
     right: 0;
     bottom: 50px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding:0 50px;
+    padding: 0 50px;
     gap: 1rem;
     width: 100%;
   }
 
-  & .groceries-form{
+  & .groceries-form {
     display: flex;
     width: 100%;
-    gap: .5rem;
+    gap: 0.5rem;
   }
 
-
-  & .add-item-button{
-   
+  & .add-item-button {
     font-size: 2rem;
-    background-color: #3B3B71;
+    background-color: #3b3b71;
     color: white;
     display: flex;
-    padding: .1rem 1rem;
+    padding: 0.1rem 1rem;
     border-radius: 1rem;
     cursor: pointer;
 
     transition: all 300ms;
 
     &:hover {
-        background-color: #1d1d42;
+      background-color: #1d1d42;
     }
 
-    & div{
+    & div {
       display: grid;
       place-items: center;
     }
   }
-
 }

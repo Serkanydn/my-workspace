@@ -1,4 +1,8 @@
-import { AiOutlineHome, AiOutlineIdcard, AiOutlineArrowRight } from "react-icons/ai";
+import {
+  AiOutlineHome,
+  AiOutlineIdcard,
+  AiOutlineArrowRight,
+} from "react-icons/ai";
 import { SiPagekit } from "react-icons/si";
 import { MdOutlinePrivacyTip } from "react-icons/md";
 import { BsCardText } from "react-icons/bs";
@@ -28,7 +32,8 @@ const menuItems = [
         title: "Pricing",
         icon: <IoArrowRedoSharp className="icon" />,
         type: "button",
-        reference: "https://www.uidesigndaily.com/posts/figma-pricing-card-subscribe-day-1566",
+        reference:
+          "https://www.uidesigndaily.com/posts/figma-pricing-card-subscribe-day-1566",
       },
     ],
   },
@@ -42,7 +47,8 @@ const menuItems = [
         title: "Cookie Preferences Modal",
         icon: <IoArrowRedoSharp className="icon" />,
         type: "button",
-        reference: "https://www.uidesigndaily.com/posts/figma-cookie-preferences-modal-cookies-settings-day-1581",
+        reference:
+          "https://www.uidesigndaily.com/posts/figma-cookie-preferences-modal-cookies-settings-day-1581",
       },
     ],
   },
@@ -56,7 +62,8 @@ const menuItems = [
         title: "1",
         icon: <IoArrowRedoSharp className="icon" />,
         type: "button",
-        reference: "https://www.uidesigndaily.com/posts/figma-notification-day-1559",
+        reference:
+          "https://www.uidesigndaily.com/posts/figma-notification-day-1559",
       },
     ],
   },
@@ -75,16 +82,17 @@ const menuItems = [
         title: "1",
         icon: <IoArrowRedoSharp className="icon" />,
         type: "button",
-        reference: "https://www.uidesigndaily.com/posts/figma-landing-page-website-day-955",
+        reference:
+          "https://www.uidesigndaily.com/posts/figma-landing-page-website-day-955",
       },
       {
         path: "/simpleProjects/landingpages/2",
         title: "2",
         icon: <IoArrowRedoSharp className="icon" />,
         type: "button",
-        reference: "https://www.uidesigndaily.com/posts/sketch-domain-site-landing-page-website-day-1161",
+        reference:
+          "https://www.uidesigndaily.com/posts/sketch-domain-site-landing-page-website-day-1161",
       },
- 
     ],
   },
   {
@@ -97,21 +105,24 @@ const menuItems = [
         title: "Buy Subscription",
         icon: <IoArrowRedoSharp className="icon" />,
         type: "button",
-        reference: "https://www.uidesigndaily.com/posts/figma-buy-subscription-section-pricing-card-day-1574",
+        reference:
+          "https://www.uidesigndaily.com/posts/figma-buy-subscription-section-pricing-card-day-1574",
       },
       {
         path: "/simpleProjects/sections/user-list-section",
         title: "User List",
         icon: <IoArrowRedoSharp className="icon" />,
         type: "button",
-        reference: "https://www.uidesigndaily.com/posts/figma-users-list-card-day-1542",
+        reference:
+          "https://www.uidesigndaily.com/posts/figma-users-list-card-day-1542",
       },
       {
-        path: "/simpleProjects/sections/sign-up-1",
-        title: "Sign Up 1",
+        path: "/simpleProjects/sections/log-in-1",
+        title: "Log in 1",
         icon: <IoArrowRedoSharp className="icon" />,
         type: "button",
-        reference: "https://www.uidesigndaily.com/posts/sketch-log-in-sign-up-authentication-day-1431",
+        reference:
+          "https://www.uidesigndaily.com/posts/sketch-log-in-sign-up-authentication-day-1431",
       },
     ],
   },
