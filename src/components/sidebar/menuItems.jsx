@@ -9,6 +9,7 @@ import { BsCardText } from "react-icons/bs";
 import { IoIosNotifications } from "react-icons/io";
 import { RxSection } from "react-icons/rx";
 import { IoArrowRedoSharp } from "react-icons/io5";
+import { TfiLayoutAccordionMerged } from "react-icons/tfi";
 
 const menuItems = [
   {
@@ -49,6 +50,19 @@ const menuItems = [
         type: "button",
         reference:
           "https://www.uidesigndaily.com/posts/figma-cookie-preferences-modal-cookies-settings-day-1581",
+      },
+    ],
+  },
+  {
+    title: "Accordion",
+    type: "groupButton",
+    icon: <TfiLayoutAccordionMerged className="icon" />,
+    items: [
+      {
+        path: "/components/accordions/simple",
+        title: "Simple",
+        icon: <IoArrowRedoSharp className="icon" />,
+        type: "button",
       },
     ],
   },

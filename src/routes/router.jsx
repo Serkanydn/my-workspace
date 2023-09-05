@@ -7,6 +7,7 @@ import LandingPage2 from "../simpleProjects/landingPages/2";
 import GroceriesList from "../simpleProjects/groceriesList";
 import Notification1 from "../components/notifications/1";
 import PricingCard from "../components/cards/pricing";
+import Accordion from "../components/accordion";
 import BuySubscription from "../simpleProjects/sections/buySubscription";
 import UserListSection from "../simpleProjects/sections/userList";
 import LogIn1 from "../simpleProjects/sections/logIn1";
@@ -38,6 +39,12 @@ const router = createBrowserRouter([
       {
         path: "/components/notifications/1",
         element: <Notification1 />,
+      },
+
+      // * Accordion
+      {
+        path: "/components/accordions/simple",
+        element: <Accordion />,
       },
 
       // ! Simple Projects
