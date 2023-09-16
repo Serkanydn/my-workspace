@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import styles from "./style.module.css";
-import Sidebar from "../../components/sidebar";
-import Topbar from "../../components/topbar";
+import Sidebar from "../sidebar";
+import Topbar from "../topbar";
 import {  useModals } from "../../utils/modalHelper"
 import MainModal from "../../components/modals/mainModal";
 import { motion, AnimatePresence } from 'framer-motion'
