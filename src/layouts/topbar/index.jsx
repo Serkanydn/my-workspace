@@ -19,12 +19,14 @@ function Topbar() {
       <div className="header">
         <HiOutlineMenu onClick={handleToggleSidebar} className="toggler" />
       </div>
-      <div className="navigation">
-        {reference && (
+      {reference && (  <div className="navigation">
+      
           <a href={reference} target="_blank">
             Reference Link
           </a>
-        )}
+    
+      </div>  )}
+        
         {/* {location
           .split("/")
           .filter((path) => path !== "")
@@ -35,7 +37,6 @@ function Topbar() {
               </NavLink>
             );
           })} */}
-      </div>
     </div>
   );
 }

@@ -10,6 +10,7 @@ import { IoIosNotifications } from "react-icons/io";
 import { RxSection } from "react-icons/rx";
 import { IoArrowRedoSharp } from "react-icons/io5";
 import { TfiLayoutAccordionMerged } from "react-icons/tfi";
+import { TbComponents } from "react-icons/tb";
 
 const menuItems = [
   {
@@ -78,6 +79,25 @@ const menuItems = [
         type: "button",
         reference:
           "https://www.uidesigndaily.com/posts/figma-notification-day-1559",
+      },
+    ],
+  },
+  {
+    title: "Compounts",
+    type: "groupButton",
+    icon: <TbComponents className="icon" />,
+    items: [
+      {
+        path: "/components/compounts/form-stepper",
+        title: "Form Stepper",
+        icon: <IoArrowRedoSharp className="icon" />,
+        type: "button",
+      },
+      {
+        path: "/components/compounts/popever",
+        title: "Popever",
+        icon: <IoArrowRedoSharp className="icon" />,
+        type: "button",
       },
     ],
   },

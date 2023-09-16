@@ -12,6 +12,8 @@ import BuySubscription from "../simpleProjects/sections/buySubscription";
 import UserListSection from "../simpleProjects/sections/userList";
 import LogIn1 from "../simpleProjects/sections/logIn1";
 import Table1 from "../simpleProjects/tables/1";
+import FormStepper from "../components/compounts/formStepper";
+import Popever from "../components/compounts/popever";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +47,16 @@ const router = createBrowserRouter([
       {
         path: "/components/accordions/simple",
         element: <Accordion />,
+      },
+
+      // * Compounts
+      {
+        path: "/components/compounts/form-stepper",
+        element: <FormStepper />,
+      },
+      {
+        path: "/components/compounts/popever",
+        element: <Popever />,
       },
 
       // ! Simple Projects

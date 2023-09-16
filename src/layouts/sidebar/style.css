@@ -111,7 +111,7 @@
 }
 
 .sidebar .sub-items {
-  /* margin-left: var(--margin-xs); */
+  margin-left: var(--margin-xs);
   height: auto;
 }
 
