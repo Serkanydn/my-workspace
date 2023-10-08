@@ -30,10 +30,10 @@ function Sidebar() {
             <SidebarSingle
               onClick={() => handleSetReference(item.reference)}
               key={index}
-              path={item.path}
-              variant={item.type}
-              title={item.title}
-              icon={item.icon}
+              path={item?.path}
+              title={item?.title}
+              icon={item?.icon}
+              blank={item?.blank}
             />
           ) : item.type == "title" ? (
             <Title key={index} text={item.title} />

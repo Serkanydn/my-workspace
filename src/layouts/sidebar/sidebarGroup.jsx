@@ -68,7 +68,7 @@ function SidebarGroup({ title, icon, items }) {
                         onClick={() => handleSetReference(item.reference)}
                         key={index * 100}
                         path={item.path}
-                        variant={item.type}
+                        blank={item.blank}
                         title={item.title}
                         icon={item.icon}
                       />

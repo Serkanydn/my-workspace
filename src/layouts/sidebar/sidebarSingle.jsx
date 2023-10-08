@@ -1,11 +1,16 @@
 /* eslint-disable react/prop-types */
 import { NavLink } from "react-router-dom";
 
-function SidebarSingle({ path, title, icon, ...props }) {
+function SidebarSingle({ path, title, icon, blank = false, ...props }) {
   return (
     <>
       <li className="sidebar-item">
-        <NavLink {...props} to={path} className="sidebar-link">
+        <NavLink
+          {...props}
+          to={path}
+          target={blank && "_blank"}
+          className="sidebar-link"
+        >
           <span>
             {icon}
             {title}

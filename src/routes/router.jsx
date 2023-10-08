@@ -14,6 +14,11 @@ import LogIn1 from "../simpleProjects/sections/logIn1";
 import Table1 from "../simpleProjects/tables/1";
 import FormStepper from "../components/compounts/formStepper";
 import Popever from "../components/compounts/popever";
+import SpaceTourism from "../simpleProjects/webPages/spaceTourism";
+import SpaceTourismHome from "../simpleProjects/webPages/spaceTourism/pages/home";
+import SpaceTourismDestination from "../simpleProjects/webPages/spaceTourism/pages/destination";
+import SpaceTourismCrew from "../simpleProjects/webPages/spaceTourism/pages/crew";
+import SpaceTourismTechnology from "../simpleProjects/webPages/spaceTourism/pages/technology";
 
 const router = createBrowserRouter([
   {
@@ -95,6 +100,27 @@ const router = createBrowserRouter([
       {
         path: "/simpleProjects/tables/1",
         element: <Table1 />,
+      },
+    ],
+  },
+  {
+    element: <SpaceTourism />,
+    children: [
+      {
+        path: "/simpleProjects/web-pages/space-tourism/home",
+        element: <SpaceTourismHome />,
+      },
+      {
+        path: "/simpleProjects/web-pages/space-tourism/destination",
+        element: <SpaceTourismDestination />,
+      },
+      {
+        path: "/simpleProjects/web-pages/space-tourism/crew",
+        element: <SpaceTourismCrew />,
+      },
+      {
+        path: "/simpleProjects/web-pages/space-tourism/technology",
+        element: <SpaceTourismTechnology />,
       },
     ],
   },

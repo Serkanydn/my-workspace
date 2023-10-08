@@ -11,6 +11,7 @@ import { RxSection } from "react-icons/rx";
 import { IoArrowRedoSharp } from "react-icons/io5";
 import { TfiLayoutAccordionMerged } from "react-icons/tfi";
 import { TbComponents } from "react-icons/tb";
+import { RiPagesLine } from "react-icons/ri";
 
 const menuItems = [
   {
@@ -126,6 +127,22 @@ const menuItems = [
         type: "button",
         reference:
           "https://www.uidesigndaily.com/posts/sketch-domain-site-landing-page-website-day-1161",
+      },
+    ],
+  },
+  {
+    title: "Web Pages",
+    type: "groupButton",
+    icon: <RiPagesLine className="icon" />,
+    items: [
+      {
+        path: "/simpleProjects/web-pages/space-tourism/home",
+        title: "Space Tourism",
+        icon: <IoArrowRedoSharp className="icon" />,
+        type: "button",
+        blank: true,
+        reference:
+          "https://www.uidesigndaily.com/posts/figma-landing-page-website-day-955",
       },
     ],
   },
