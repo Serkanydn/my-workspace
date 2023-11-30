@@ -1,0 +1,127 @@
+#image-slider-1 {
+  max-width: 1000px;
+  width: 100%;
+  overflow: hidden;
+  padding: 0 1.5rem;
+  height: max-content;
+  container-type: inline-size;
+
+  .slider-wrapper {
+    position: relative;
+
+    .image-list {
+      display: flex;
+      gap: 1.5rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+      margin-bottom: 0.5rem;
+      scroll-snap-type: x mandatory;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .image-item {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        user-select: none;
+        background-color: #ccc;
+        flex-shrink: 0;
+        display: grid;
+        place-items: center;
+      }
+    }
+
+    .slide-button {
+      position: absolute;
+      top: 50%;
+      display: grid;
+      place-items: center;
+      height: 50px;
+      width: 50px;
+      color: #fff;
+      border: none;
+      outline: none;
+      background: #000;
+      font-size: 1.5rem;
+      cursor: pointer;
+      border-radius: 50%;
+      transform: translateY(-50%);
+      user-select: none;
+      &:hover {
+        background-color: #444;
+      }
+
+      &#prev-button {
+        left: -1.5rem;
+        display: none;
+      }
+      &#next-button {
+        right: -1.5rem;
+      }
+    }
+  }
+
+  .slider-scrollbar {
+    height: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      .scrollbar-track {
+        height: 4px;
+        .scrollbar-thumb {
+          height: inherit;
+        }
+      }
+    }
+
+    .scrollbar-track {
+      position: relative;
+      border-radius: 4px;
+      height: 2px;
+      width: 100%;
+      background-color: #ccc;
+
+      .scrollbar-thumb {
+        position: absolute;
+        height: 2px;
+        width: 30%;
+        background-color: #000;
+        border-radius: inherit;
+        cursor: grab;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: -10px;
+          bottom: -10px;
+        }
+
+        &:active {
+          cursor: grabbing;
+          height: 8px;
+          top: -2px;
+        }
+      }
+    }
+  }
+}
+
+@container (max-width: 500px) {
+  #image-slider-1 {
+    .slider-scrollbar {
+      /* display: none; */
+      height: 0;
+    }
+    .slider-wrapper {
+      .slide-button {
+        display: none !important;
+      }
+    }
+  }
+}

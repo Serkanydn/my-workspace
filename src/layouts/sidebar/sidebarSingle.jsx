@@ -8,7 +8,7 @@ function SidebarSingle({ path, title, icon, blank = false, ...props }) {
         <NavLink
           {...props}
           to={path}
-          target={blank && "_blank"}
+          target={blank ? "_blank" : ""}
           className="sidebar-link"
         >
           <span>

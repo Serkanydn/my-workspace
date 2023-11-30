@@ -19,6 +19,7 @@ import SpaceTourismHome from "../simpleProjects/webPages/spaceTourism/pages/home
 import SpaceTourismDestination from "../simpleProjects/webPages/spaceTourism/pages/destination";
 import SpaceTourismCrew from "../simpleProjects/webPages/spaceTourism/pages/crew";
 import SpaceTourismTechnology from "../simpleProjects/webPages/spaceTourism/pages/technology";
+import Sliders from "../components/sliders";
 
 const router = createBrowserRouter([
   {
@@ -62,6 +63,11 @@ const router = createBrowserRouter([
       {
         path: "/components/compounts/popever",
         element: <Popever />,
+      },
+      // * Sliders
+      {
+        path: "/components/sliders",
+        element: <Sliders />,
       },
 
       // ! Simple Projects

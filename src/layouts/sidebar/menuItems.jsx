@@ -102,6 +102,12 @@ const menuItems = [
       },
     ],
   },
+  {
+    path: "/components/sliders",
+    title: "Sliders",
+    icon: <IoArrowRedoSharp className="icon" />,
+    type: "button",
+  },
 
   {
     title: "Simple Projects",
