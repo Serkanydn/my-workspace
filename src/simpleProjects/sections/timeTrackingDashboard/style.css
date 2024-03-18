@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+#time-tracking-dashboard {
+  background-color: red;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  font-family: Rubik, monospace, public;
+  container-type: inline-size;
+
+  --media-mobile: 375px;
+  --media-desktop: 1024px;
+
+  --clr-primary-blue: hsl(246, 80%, 60%);
+
+  --clr-work: hsl(15, 100%, 70%);
+  --clr-play: hsl(195, 74%, 62%);
+  --clr-study: hsl(348, 100%, 68%);
+  --clr-exercise: hsl(145, 58%, 55%);
+  --clr-social: hsl(264, 64%, 52%);
+  --clr-self-care: hsl(43, 84%, 65%);
+
+  --clr-neutral-900: hsl(226, 43%, 10%);
+  --clr-neutral-800: hsl(235, 46%, 20%);
+  --clr-neutral-700: hsl(235, 45%, 61%);
+  --clr-neutral-600: hsl(236, 100%, 87%);
+
+  --fz-body: 1.125rem;
+  --fz-small: 0.75rem;
+  --fz-medium: 0.875rem;
+  --fz-large: 2rem;
+
+  --fw-light: 300;
+  --fw-medium: 400;
+  --fw-semibold: 500;
+
+  --gap: 1.5rem;
+
+  background-color: var(--clr-neutral-900);
+  color: #fff;
+  font-size: var(--fz-body);
+}
+
+#time-tracking-dashboard .wrapper {
+  background-color: var(--clr-blue-900);
+  max-width: var(--media-desktop);
+  width: 100%;
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: var(--gap);
+  margin: auto;
+}
+
+#time-tracking-dashboard .wrapper .user {
+  background-color: var(--clr-neutral-800);
+  border-radius: var(--gap);
+  height: 100%;
+  max-height: 424px;
+  display: flex;
+  flex-direction: column;
+}
+#time-tracking-dashboard .wrapper .user .profile {
+  border-radius: var(--gap);
+  padding: 2rem;
+  background-color: var(--clr-primary-blue);
+  flex: 1;
+}
+
+#time-tracking-dashboard .wrapper .user .profile_image {
+  max-width: 50px;
+  margin-bottom: 1rem;
+}
+
+#time-tracking-dashboard .wrapper .user .profile .profile_text-content span {
+  font-size: var(--fz-small);
+  color: var(--clr-neutral-600);
+  font-weight: var(--fw-semibold);
+}
+
+#time-tracking-dashboard .wrapper .user .profile .profile_text-content h2 {
+  font-size: var(--fz-large);
+  font-weight: var(--fw-light);
+}
+
+#time-tracking-dashboard .wrapper .profile_navigation {
+  background-color: var(--clr-neutral-800);
+  padding: var(--gap);
+  border-radius: var(--gap);
+}
+#time-tracking-dashboard .wrapper .profile_navigation ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: var(--fz-small);
+}
+
+#time-tracking-dashboard .wrapper .profile_navigation ul li a {
+  font-weight: var(--fw-semibold);
+}
+#time-tracking-dashboard .wrapper .profile_navigation ul li:not(.active) {
+  color: var(--clr-neutral-600);
+}
+
+#time-tracking-dashboard .time-cards {
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+#time-tracking-dashboard .time-cards .time-card {
+  border-radius: var(--gap);
+  overflow: hidden;
+  position: relative;
+}
+
+#time-tracking-dashboard .time-cards .time-card[data-type]::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-size: 25%;
+  background-position: 90% center;
+}
+
+#time-tracking-dashboard .time-cards .time-card[data-type="work"]::before {
+  background-color: var(--clr-work);
+  background-image: url(./images/icon-work.svg);
+}
+
+#time-tracking-dashboard .time-cards .time-card[data-type="play"]::before {
+  background-color: var(--clr-play);
+  background-image: url(./images/icon-play.svg);
+  background-position: 90% center;
+}
+
+#time-tracking-dashboard .time-cards .time-card[data-type="study"]::before {
+  background-color: var(--clr-study);
+  background-image: url(./images/icon-study.svg);
+}
+
+#time-tracking-dashboard .time-cards .time-card[data-type="exercise"]::before {
+  background-color: var(--clr-exercise);
+  background-image: url(./images/icon-exercise.svg);
+  background-position: 90% -10%;
+}
+
+#time-tracking-dashboard .time-cards .time-card[data-type="social"]::before {
+  background-color: var(--clr-social);
+  background-image: url(./images/icon-social.svg);
+  background-position: 90%;
+}
+
+#time-tracking-dashboard .time-cards .time-card[data-type="selfcare"]::before {
+  background-color: var(--clr-self-care);
+  background-image: url(./images/icon-self-care.svg);
+  background-position: 90% center;
+}
+
+#time-tracking-dashboard .time-cards .time-card .time-card_content {
+  padding: 2rem;
+  border-radius: var(--gap);
+  background-color: var(--clr-neutral-800);
+  margin-top: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+#time-tracking-dashboard
+  .time-cards
+  .time-card
+  .time-card_content
+  .time-card_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--gap);
+}
+
+#time-tracking-dashboard
+  .time-cards
+  .time-card
+  .time-card_content
+  .time-card_header
+  h2 {
+  font-size: var(--fz-medium);
+  font-weight: var(--fw-semibold);
+}
+
+#time-tracking-dashboard
+  .time-cards
+  .time-card
+  .time-card_content
+  .time-card_body
+  p {
+  font-size: 48px;
+  font-weight: var(--fw-light);
+}
+
+#time-tracking-dashboard
+  .time-cards
+  .time-card
+  .time-card_content
+  .time-card_body
+  span {
+  font-weight: var(--fw-light);
+  font-size: var(--fz-small);
+  color: var(--clr-neutral-600);
+}
+
+@container (max-width: 475px) {
+  #time-tracking-dashboard .wrapper {
+    grid-template-columns: 1fr;
+  }
+  #time-tracking-dashboard .time-cards {
+    grid-template-columns: 1fr;
+  }
+
+  #time-tracking-dashboard .time-cards .time-card .time-card_content {
+    margin-top: 40px;
+  }
+
+  #time-tracking-dashboard .wrapper .user .profile {
+    display: flex;
+    text-wrap: nowrap;
+    gap: var(--gap);
+    align-items: center;
+  }
+
+  #time-tracking-dashboard .wrapper .user .profile .profile_image {
+    margin-bottom: 0;
+  }
+
+  #time-tracking-dashboard .wrapper .user .profile .profile_text-content h2 {
+    font-size: var(--gap);
+  }
+
+  #time-tracking-dashboard .wrapper .profile_navigation ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #time-tracking-dashboard
+    .time-cards
+    .time-card
+    .time-card_content
+    .time-card_header {
+    margin-bottom: 0.5rem;
+  }
+
+  #time-tracking-dashboard
+    .time-cards
+    .time-card
+    .time-card_content
+    .time-card_body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #time-tracking-dashboard
+    .time-cards
+    .time-card
+    .time-card_content
+    .time-card_body
+    p {
+    font-size: var(--gap);
+  }
+}

@@ -181,6 +181,12 @@ const menuItems = [
         reference:
           "https://www.uidesigndaily.com/posts/sketch-log-in-sign-up-authentication-day-1431",
       },
+      {
+        path: "/simpleProjects/sections/time-tracking-dashboard",
+        title: "Time Tracking Dashboard",
+        icon: <IoArrowRedoSharp className="icon" />,
+        type: "button",
+      },
     ],
   },
   {

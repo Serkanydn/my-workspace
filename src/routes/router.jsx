@@ -20,6 +20,7 @@ import SpaceTourismDestination from "../simpleProjects/webPages/spaceTourism/pag
 import SpaceTourismCrew from "../simpleProjects/webPages/spaceTourism/pages/crew";
 import SpaceTourismTechnology from "../simpleProjects/webPages/spaceTourism/pages/technology";
 import Sliders from "../components/sliders";
+import TimeTrackingDashboard from "../simpleProjects/sections/timeTrackingDashboard";
 
 const router = createBrowserRouter([
   {
@@ -99,6 +100,10 @@ const router = createBrowserRouter([
       {
         path: "/simpleProjects/sections/log-in-1",
         element: <LogIn1 />,
+      },
+      {
+        path: "/simpleProjects/sections/time-tracking-dashboard",
+        element: <TimeTrackingDashboard />,
       },
 
       // * Tables
