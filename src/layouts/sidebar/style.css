@@ -24,6 +24,7 @@
   height: 100%;
   /* scrollbar-gutter: stable; */
   padding-left: 5px;
+  z-index: 999;
 }
 
 .sidebar > ul {
@@ -136,4 +137,10 @@
 }
 .sidebar::-webkit-scrollbar-thumb {
   background-color: var(--bg-scroll);
+}
+
+@media (max-width: 968px) {
+  .sidebar.show {
+    position: absolute;
+  }
 }

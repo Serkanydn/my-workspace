@@ -187,6 +187,12 @@ const menuItems = [
         icon: <IoArrowRedoSharp className="icon" />,
         type: "button",
       },
+      {
+        path: "/simpleProjects/sections/testimonials-grid-section",
+        title: "testimonials Grid Section",
+        icon: <IoArrowRedoSharp className="icon" />,
+        type: "button",
+      },
     ],
   },
   {
