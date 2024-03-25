@@ -8,7 +8,7 @@
 }
 
 .pricing-card .container {
-  max-width: 600px;
+  max-width: 500px;
   background-color: white;
   border-radius: 2rem;
   padding: 4rem;
@@ -43,8 +43,8 @@
   display: flex;
   align-items: center;
   gap: 24px;
-  padding: 42px;
-  font-size: 16px;
+  padding: 24px;
+  font-size: 12px;
   font-weight: 600;
   border-radius: 0.5rem;
   border: var(--border-size) solid var(--border-color);
@@ -74,11 +74,11 @@
 }
 
 .pricing-card .container .cards .card .content p:first-of-type {
-  font-size: 24px;
+  font-size: 16px;
 }
 
 .pricing-card input[type="radio"] {
-   appearance: none; 
+  appearance: none;
   min-width: 42px;
   min-height: 42px;
   position: relative;
@@ -86,7 +86,6 @@
   margin: 0;
   cursor: pointer;
 }
-
 
 .pricing-card .container .cards .card:has(input[type="radio"]:checked) {
   --border-size: 1px;
@@ -132,15 +131,14 @@
 
 .pricing-card .btn:not(.btn-link),
 .pricing-card .btn-outlined {
-  height: 75px;
-  padding: 24px;
+  height: 50px;
   border-radius: 45px;
   width: 100%;
 }
 
 .pricing-card .btn,
 .pricing-card .btn-outlined {
-  font-size: 18px;
+  font-size: 14px;
   background-color: transparent;
   cursor: pointer;
 }

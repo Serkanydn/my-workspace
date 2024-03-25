@@ -38,6 +38,12 @@ const menuItems = [
         reference:
           "https://www.uidesigndaily.com/posts/figma-pricing-card-subscribe-day-1566",
       },
+      {
+        path: "/components/cards/glowing-border",
+        title: "Glowing Border",
+        icon: <IoArrowRedoSharp className="icon" />,
+        type: "button",
+      },
     ],
   },
   {
@@ -147,8 +153,20 @@ const menuItems = [
         icon: <IoArrowRedoSharp className="icon" />,
         type: "button",
         blank: true,
-        reference:
-          "https://www.uidesigndaily.com/posts/figma-landing-page-website-day-955",
+      },
+      {
+        path: "/simpleProjects/web-pages/wave-sections",
+        title: "Wave Sections",
+        icon: <IoArrowRedoSharp className="icon" />,
+        type: "button",
+        blank: true,
+      },
+      {
+        path: "/simpleProjects/web-pages/3d-grid-layout",
+        title: "3D Grid Layout",
+        icon: <IoArrowRedoSharp className="icon" />,
+        type: "button",
+        blank: true,
       },
     ],
   },
@@ -162,8 +180,6 @@ const menuItems = [
         title: "Buy Subscription",
         icon: <IoArrowRedoSharp className="icon" />,
         type: "button",
-        reference:
-          "https://www.uidesigndaily.com/posts/figma-buy-subscription-section-pricing-card-day-1574",
       },
       {
         path: "/simpleProjects/sections/user-list-section",
@@ -189,7 +205,7 @@ const menuItems = [
       },
       {
         path: "/simpleProjects/sections/testimonials-grid-section",
-        title: "testimonials Grid Section",
+        title: "Testimonials Grid Section",
         icon: <IoArrowRedoSharp className="icon" />,
         type: "button",
       },

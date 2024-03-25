@@ -1,0 +1,75 @@
+#glowing-border-card {
+  display: grid;
+  grid-template-columns: minmax(300px, 300px);
+  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 1rem;
+  margin: auto;
+  overflow: auto;
+  max-height: calc(100vh - 50px);
+}
+
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+#glowing-border-card .card {
+  --clr-1: #052b2f;
+
+  height: 60vh;
+  aspect-ratio: 1 / 1.5;
+  background: var(--clr-1);
+  border-radius: 0.5rem;
+
+  position: relative;
+
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+}
+
+#glowing-border-card [data-type="glowing"]::before,
+#glowing-border-card [data-type="glowing"]::after {
+  content: "";
+  transition: all 100ms linear;
+
+  position: absolute;
+  inset: -0.5rem;
+  z-index: -1;
+  background: conic-gradient(
+    from var(--gradient-angle),
+    var(--clr-3, #0e4b50),
+    var(--clr-4, #2d8f85),
+    var(--clr-5, #637c54),
+    var(--clr-4, #2d8f85),
+    var(--clr-3, #0e4b50)
+  );
+  border-radius: inherit;
+  animation: rotation 5s linear infinite;
+  opacity: 0;
+}
+
+#glowing-border-card [data-type="glowing"]:hover::before,
+#glowing-border-card [data-type="glowing"]:hover::after {
+  opacity: 1;
+}
+
+#glowing-border-card [data-type="glowing"]::after {
+  filter: blur(2.5rem);
+}
+
+@keyframes rotation {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
+}

@@ -1,27 +1,66 @@
 import { createBrowserRouter } from "react-router-dom";
-import MainLayout from "../layouts/mainLayout";
-import ShoesCard from "../components/shoesCard";
-import CookiePreferencesModal from "../components/modals/cookiePreferences";
-import LandingPage1 from "../simpleProjects/landingPages/1";
-import LandingPage2 from "../simpleProjects/landingPages/2";
-import GroceriesList from "../simpleProjects/groceriesList";
-import Notification1 from "../components/notifications/1";
-import PricingCard from "../components/cards/pricing";
-import Accordion from "../components/accordion";
-import BuySubscription from "../simpleProjects/sections/buySubscription";
-import UserListSection from "../simpleProjects/sections/userList";
-import LogIn1 from "../simpleProjects/sections/logIn1";
-import Table1 from "../simpleProjects/tables/1";
-import FormStepper from "../components/compounts/formStepper";
-import Popever from "../components/compounts/popever";
-import SpaceTourism from "../simpleProjects/webPages/spaceTourism";
-import SpaceTourismHome from "../simpleProjects/webPages/spaceTourism/pages/home";
-import SpaceTourismDestination from "../simpleProjects/webPages/spaceTourism/pages/destination";
-import SpaceTourismCrew from "../simpleProjects/webPages/spaceTourism/pages/crew";
-import SpaceTourismTechnology from "../simpleProjects/webPages/spaceTourism/pages/technology";
-import Sliders from "../components/sliders";
-import TimeTrackingDashboard from "../simpleProjects/sections/timeTrackingDashboard";
-import TestimonialsGridSection from "../simpleProjects/sections/testimonialsGridSection";
+import React from "react";
+
+const MainLayout = React.lazy(() => import("../layouts/mainLayout"));
+const CookiePreferencesModal = React.lazy(() =>
+  import("../components/modals/cookiePreferences")
+);
+const LandingPage1 = React.lazy(() =>
+  import("../simpleProjects/landingPages/1")
+);
+const LandingPage2 = React.lazy(() =>
+  import("../simpleProjects/landingPages/2")
+);
+const GroceriesList = React.lazy(() =>
+  import("../simpleProjects/groceriesList")
+);
+const Notification1 = React.lazy(() => import("../components/notifications/1"));
+const Accordion = React.lazy(() => import("../components/accordion"));
+const BuySubscription = React.lazy(() =>
+  import("../simpleProjects/sections/buySubscription")
+);
+const UserListSection = React.lazy(() =>
+  import("../simpleProjects/sections/userList")
+);
+const LogIn1 = React.lazy(() => import("../simpleProjects/sections/logIn1"));
+const Table1 = React.lazy(() => import("../simpleProjects/tables/1"));
+const FormStepper = React.lazy(() =>
+  import("../components/compounts/formStepper")
+);
+const Popever = React.lazy(() => import("../components/compounts/popever"));
+const SpaceTourism = React.lazy(() =>
+  import("../simpleProjects/webPages/spaceTourism")
+);
+const SpaceTourismHome = React.lazy(() =>
+  import("../simpleProjects/webPages/spaceTourism/pages/home")
+);
+const SpaceTourismDestination = React.lazy(() =>
+  import("../simpleProjects/webPages/spaceTourism/pages/destination")
+);
+const SpaceTourismCrew = React.lazy(() =>
+  import("../simpleProjects/webPages/spaceTourism/pages/crew")
+);
+const SpaceTourismTechnology = React.lazy(() =>
+  import("../simpleProjects/webPages/spaceTourism/pages/technology")
+);
+const Sliders = React.lazy(() => import("../components/sliders"));
+const TimeTrackingDashboard = React.lazy(() =>
+  import("../simpleProjects/sections/timeTrackingDashboard")
+);
+const TestimonialsGridSection = React.lazy(() =>
+  import("../simpleProjects/sections/testimonialsGridSection")
+);
+const GlowingBorderCard = React.lazy(() =>
+  import("../components/cards/glowindBorder")
+);
+const WaveSections = React.lazy(() =>
+  import("../simpleProjects/webPages/waveSections")
+);
+const ThreeDGridLayout = React.lazy(() =>
+  import("../simpleProjects/webPages/threeDGridLayout")
+);
+
+const PricingCard = React.lazy(() => import("../components/cards/pricing"));
 
 const router = createBrowserRouter([
   {
@@ -37,6 +76,10 @@ const router = createBrowserRouter([
       {
         path: "/components/cards/pricing",
         element: <PricingCard />,
+      },
+      {
+        path: "/components/cards/glowing-border",
+        element: <GlowingBorderCard />,
       },
 
       // * Modals
@@ -139,6 +182,14 @@ const router = createBrowserRouter([
         element: <SpaceTourismTechnology />,
       },
     ],
+  },
+  {
+    path: "/simpleProjects/web-pages/wave-sections",
+    element: <WaveSections />,
+  },
+  {
+    path: "/simpleProjects/web-pages/3d-grid-layout",
+    element: <ThreeDGridLayout />,
   },
 ]);
 
