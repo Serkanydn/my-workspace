@@ -44,6 +44,12 @@ const menuItems = [
         icon: <IoArrowRedoSharp className="icon" />,
         type: "button",
       },
+      {
+        path: "/components/cards/stack-cards",
+        title: "Stack Cards",
+        icon: <IoArrowRedoSharp className="icon" />,
+        type: "button",
+      },
     ],
   },
   {

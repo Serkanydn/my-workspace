@@ -61,6 +61,7 @@ const ThreeDGridLayout = React.lazy(() =>
 );
 
 const PricingCard = React.lazy(() => import("../components/cards/pricing"));
+const StackCards = React.lazy(() => import("../components/cards/stackCards"));
 
 const router = createBrowserRouter([
   {
@@ -80,6 +81,10 @@ const router = createBrowserRouter([
       {
         path: "/components/cards/glowing-border",
         element: <GlowingBorderCard />,
+      },
+      {
+        path: "/components/cards/stack-cards",
+        element: <StackCards />,
       },
 
       // * Modals

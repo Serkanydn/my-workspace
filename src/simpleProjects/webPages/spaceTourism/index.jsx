@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import "./style.css";
 import Header from "./components/header";
 import { Outlet } from "react-router-dom";
@@ -28,7 +28,9 @@ function Index() {
     >
       <Header />
       <main>
-        <Outlet />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Outlet />
+        </Suspense>
       </main>
     </div>
   );
