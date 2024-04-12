@@ -22,38 +22,40 @@
       display: block;
     }
 
-
     & .main-modal-container__header {
       border-bottom: 1px solid rgb(227, 227, 227);
       padding: 0.75rem 1rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      color: #333;
+
+      &.borderless {
+        border-bottom-width: 0;
+      }
 
       & .icon {
         position: relative;
-        top:1px ;
+        top: 1px;
         cursor: pointer;
-        padding: .2rem;
+        padding: 0.2rem;
         transition: all 200ms;
         font-size: 1.5rem;
         color: rgb(139, 139, 139);
 
-        &:hover{
-            background-color: rgba(134, 134, 134, 0.1);
-            border-radius: .1rem;
+        &:hover {
+          background-color: rgba(134, 134, 134, 0.1);
+          border-radius: 0.1rem;
         }
       }
     }
 
-    & .main-modal-container__footer{
-        padding: 0.5rem 1rem;
-        display: flex;
-        justify-content: flex-end;
-        gap: .5rem;
-        border-top: 1px solid rgb(227, 227, 227);
+    & .main-modal-container__footer {
+      padding: 0.5rem 1rem;
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.5rem;
+      border-top: 1px solid rgb(227, 227, 227);
     }
-
-   
   }
 }

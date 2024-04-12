@@ -97,6 +97,44 @@ html,
   }
 }
 
+/* UTILITIES */
+.flex-group {
+  display: flex;
+  align-items: center;
+  gap: var(--flex-group-gap, 0.5rem);
+  flex-wrap: wrap;
+}
+
+.flex-group.end {
+  justify-content: flex-end;
+}
+
+.grid-flow {
+  display: grid;
+  align-content: start;
+  gap: var(--grid-flow-gap, 1rem);
+}
+
+.grid-flow--reverse {
+  grid-auto-flow: dense;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-nowrap {
+  text-wrap: nowrap;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-gap, 1rem);
+}
+
 .w-full {
   width: 100%;
 }

@@ -54,7 +54,6 @@ function Crew() {
           className="tab"
           activeTab={0}
           onChange={(activeIndex) => {
-            console.log("activeIndex", activeIndex);
             setActiveIndex(activeIndex);
           }}
         >

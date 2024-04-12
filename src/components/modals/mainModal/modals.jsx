@@ -1,7 +1,5 @@
+import RulesModal from "../../../simpleProjects/rockPaperScissors/components/rulesModal";
 
+const modals = [{ name: "rockPaperScissorsRulesModal", element: RulesModal }];
 
-const modals = [
-
-]
-
-export default modals
+export default modals;

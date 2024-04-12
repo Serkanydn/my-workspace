@@ -9,7 +9,6 @@ import { Suspense } from "react";
 
 function MainLayout() {
   const modals = useModals();
-
   return (
     <>
       <AnimatePresence>

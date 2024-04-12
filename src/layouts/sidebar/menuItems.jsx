@@ -225,6 +225,12 @@ const menuItems = [
     reference: "https://www.uidesigndaily.com/posts/figma-to-do-list-day-1543",
   },
   {
+    path: "/simpleProjects/rock-paper-scissors",
+    title: "Rock Paper Scissors",
+    icon: <IoArrowRedoSharp className="icon" />,
+    type: "button",
+  },
+  {
     title: "Tables",
     type: "groupButton",
     icon: <RxSection className="icon" />,

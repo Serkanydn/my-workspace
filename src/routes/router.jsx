@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import React from "react";
+import RockPaperScissors from "../simpleProjects/rockPaperScissors";
 
 const MainLayout = React.lazy(() => import("../layouts/mainLayout"));
 const CookiePreferencesModal = React.lazy(() =>
@@ -134,6 +135,10 @@ const router = createBrowserRouter([
       {
         path: "/simpleProjects/groceries-list",
         element: <GroceriesList />,
+      },
+      {
+        path: "/simpleProjects/rock-paper-scissors",
+        element: <RockPaperScissors />,
       },
 
       // * Sections

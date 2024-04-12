@@ -10,8 +10,8 @@
   gap: 3rem;
 
   & img {
-    width: 40px;
-    height: 40px;
+    max-width: 40px;
+    max-height: 40px;
   }
 
   & img:not(.showcase-image):nth-child(2) {
@@ -166,7 +166,7 @@
         }
 
         & .img-showcase-images {
-          padding: 1rem;
+          padding: 0.5rem 1rem;
           border: solid 1px #f7f8fb;
           border-radius: 0.2rem;
           background-color: white;

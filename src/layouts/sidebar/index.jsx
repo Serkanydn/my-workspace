@@ -3,15 +3,29 @@ import menuItems from "./menuItems";
 import SidebarGroup from "./sidebarGroup";
 import SidebarSingle from "./sidebarSingle";
 import Title from "./title";
+import { useMediaQuery } from "react-responsive";
 
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 
 // * Redux
 import { useSelector, useDispatch } from "react-redux";
 import { setReference } from "../../store/slices/header";
+import { close, show } from "../../store/slices/sidebar";
 
 function Sidebar() {
   const { isShow } = useSelector((state) => state.sidebar);
+
+  const isMobile = useMediaQuery({
+    query: "(max-width: 768px)",
+  });
+
+  useEffect(() => {
+    if (!isMobile) {
+      dispatch(show());
+      return;
+    }
+    dispatch(close());
+  }, [isMobile]);
 
   const memorizedMenuItems = useMemo(() => menuItems, []);
 
