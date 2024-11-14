@@ -12,6 +12,9 @@ const LandingPage1 = React.lazy(() =>
 const LandingPage2 = React.lazy(() =>
   import("../simpleProjects/landingPages/2")
 );
+const UrlShortening = React.lazy(() =>
+  import("../simpleProjects/landingPages/urlShortening")
+);
 const GroceriesList = React.lazy(() =>
   import("../simpleProjects/groceriesList")
 );
@@ -132,6 +135,7 @@ const router = createBrowserRouter([
         path: "/simpleProjects/landingpages/2",
         element: <LandingPage2 />,
       },
+
       {
         path: "/simpleProjects/groceries-list",
         element: <GroceriesList />,
@@ -200,6 +204,10 @@ const router = createBrowserRouter([
   {
     path: "/simpleProjects/web-pages/3d-grid-layout",
     element: <ThreeDGridLayout />,
+  },
+  {
+    path: "/simpleProjects/landingpages/url-shortening",
+    element: <UrlShortening />,
   },
 ]);
 

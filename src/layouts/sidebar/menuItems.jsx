@@ -146,6 +146,13 @@ const menuItems = [
         reference:
           "https://www.uidesigndaily.com/posts/sketch-domain-site-landing-page-website-day-1161",
       },
+      {
+        path: "/simpleProjects/landingpages/url-shortening",
+        title: "Url Shortening",
+        icon: <IoArrowRedoSharp className="icon" />,
+        type: "button",
+        blank: true,
+      },
     ],
   },
   {

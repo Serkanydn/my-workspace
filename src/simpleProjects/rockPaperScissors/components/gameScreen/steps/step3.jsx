@@ -29,7 +29,7 @@ function Step3() {
       <div className="selection-show-case">
         <div
           className="flow text-center fs-500 uppercase clr-white letter-spacing-3"
-          style={{ "--flow-gap": "4rem" }}
+          style={{ "--flow-space": "4rem" }}
         >
           <p>you picked</p>
           <button
@@ -50,7 +50,7 @@ function Step3() {
 
         <div
           className="flow text-center fs-500 uppercase clr-white letter-spacing-3"
-          style={{ "--flow-gap": "4rem" }}
+          style={{ "--flow-space": "4rem" }}
         >
           <p>computer picked</p>
           <button
